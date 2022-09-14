@@ -1,0 +1,39 @@
+{
+  "name": "proyecto-primeradb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "babel src/index.js -d dist",
+    "start": "nodemon --exec babel-node src/index.js",
+    "createTables": "node src/createTables.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranBZ/proyecto-primeraDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranBZ/proyecto-primeraDB/issues"
+  },
+  "homepage": "https://github.com/FranBZ/proyecto-primeraDB#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.2.10",
+    "socket.io": "^4.5.2",
+    "sqlite3": "^5.0.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.19.0",
+    "nodemon": "^2.0.19"
+  }
+}
