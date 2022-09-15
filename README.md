@@ -16,3 +16,20 @@ cuestión (tabla mensajes en sqlite3 y tabla productos en mariaDb).
 
 <sup>Formato de entrega: link a un repositorio en Github con los tres proyectos en
 carpetas separadas. No incluir los node_modules.</sup>
+
+# Como ejecutar el proyecto
+### En tu pc
+- Antes que nada debes tener instalado en tu pc node.js
+- Debes clonar el repositorio
+- Abrir una terminal y en ella dirigirte a la carpeta con el nombre del proyecto
+- En la raiz del proyecto debes crear un archivo con el nombre ``` .env ``` y configurarlo con sus respectivos datos:
+    ```
+    HOST=
+    USER=
+    PASSWORD=
+    DATABASE=
+    ```
+- Ejecutar el comando ``` npm install ```
+- Ejecutar el comando ``` npm run createTables ``` para crear las tablas necesarias, cancelar la ejecucion con ctrl + C
+- Una vez finalizado el punto anterior, ejecutar el comando ``` npm run start ```
+- Dirigirce al siguiente [Link](http://localhost:8080/productos) para probar la app

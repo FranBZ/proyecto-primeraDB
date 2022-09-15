@@ -7,11 +7,14 @@ import { chatControllers } from './controllers/chat.controllers.js'
 import { productController } from './controllers/products.controllers.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 
-dotenv.config()
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+
+dotenv.config({path: '../.env' })
+
+const PORT = process.env.PORT || 8080
 
 const app = express()
 const http = new HTTPServer(app)
@@ -53,8 +56,8 @@ io.on('connection', async (socket) => {
   })
 })
 
-const connectedServer = http.listen(8080, () => {
-  console.log("Servidor http con web sockets listo")
+const connectedServer = http.listen(PORT, () => {
+  console.log("Servidor http con web sockets listo, escuchando en puerto: ", PORT)
 })
 
 connectedServer.on("error", error => console.log)
